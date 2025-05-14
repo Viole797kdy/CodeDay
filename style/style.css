@@ -1,0 +1,79 @@
+
+:root{
+    --accent:black;
+    --bg:#FDEFE6;
+    --font:'club';
+}
+
+@font-face {
+    font-family: 'club';
+    src: url('../font/CLUB____.ttf');
+}
+
+
+a{
+    text-decoration: none;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg);
+    color: white;
+    font-family: "club";
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+button{
+    font-family: "club";
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: blue;
+    width: 120px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    &:after{
+        content: '';
+        height: 50px;
+        width: 10px;
+        background: white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation: flash 3s infinite linear;
+        filter: blur(8px);
+    }
+}
+
+nav{
+  
+display: flex;
+gap: 20px;
+
+  a{
+    color: black;
+  }
+
+}
+
+main{
+    margin-top: 100px;
+}
