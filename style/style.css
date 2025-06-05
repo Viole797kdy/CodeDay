@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 :root{
-    --accent:black;
-    --bg:#FDEFE6;
+    --bg:black;
+    --accent:#FDEFE6;
     --font:'club';
 }
 
@@ -13,6 +14,8 @@
 
 a{
     text-decoration: none;
+    font-size: 20px;
+    color: whitesmoke;
 }
 
 *{
@@ -21,22 +24,56 @@ a{
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--bg);
-    color: white;
+    color: var(--accent);
     font-family: "club";
+}
+.menu{
+    padding: 2rem 1rem;
+
+}
+.menu-header{
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+  border-bottom: 1px solid rgb(44, 44, 44);
+    & h2{
+        font-size: 2.5rem;
+    }
+
+    & p{
+        color: gray;
+    }
 }
 
 header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100px;
+    font-family: "Oswald";
+    height: 130px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    background: linear-gradient(140deg, gray 0,5%, #126354);
+    img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+
+.container{
+    width: 1228px;
+    margin: 0 auto;
 }
 
 button{
@@ -44,36 +81,333 @@ button{
     border: none;
     outline: none;
     border-radius: 5px;
-    background: blue;
+    background: #317E68;
     width: 120px;
-    height: 50px;
+    height: 40px;
     position: relative;
     overflow: hidden;
     color: white;
+    font-size: 20px;
     &:after{
         content: '';
         height: 50px;
-        width: 10px;
+        width: 15px;
         background: white;
         position: absolute;
         left: 0;
         top: 0;
-        animation: flash 3s infinite linear;
-        filter: blur(8px);
+        animation: slide 3s infinite linear;
+        filter: blur(10px);
     }
-}
+} 
 
-nav{
-  
+nav{ 
 display: flex;
 gap: 20px;
 
-  a{
-    color: black;
-  }
-
+ a{
+color: black;
+}
 }
 
 main{
-    margin-top: 100px;
+margin-top: 100px;
+}
+
+.main-sect{
+
+   width: 100%;
+   position: relative;
+   min-height: 100svh;
+   height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.main-title{
+    font-size: 4rem;
+    font-family: "Oswald", sans-serif;
+    color: whitesmoke;
+
+}
+
+#bg-design{
+    position: absolute;
+    left: calc(50% - 200px);
+    top: -30px;
+    animation: slideDown 2s 1;
+}
+
+#keyC{
+    animation: slideToUp 1s 1;
+    display:inline-block;
+}
+
+#keyO{
+    animation: slideToUp 1.5s 1;
+    display:inline-block;
+}
+
+#keyD{
+    animation: slideToUp 2s 1;
+    display:inline-block;
+}
+
+#keyE{
+    animation: slideToUp 2.5s 1;
+    display:inline-block;
+}
+
+#keyD{
+    animation: slideToUp 3s 1;
+    display:inline-block;
+}
+
+#keyA{
+    animation: slideToUp 3.5s 1;
+    display:inline-block;
+}
+
+#keyY{
+    animation: slideToUp 4s 1;
+    display:inline-block;
+}
+
+.card_coffee{
+    
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background: linear-gradient(120deg, gray 0,1%,black);
+    color: whitesmoke;
+    color-scheme: dark;
+  
+    border-radius: 30px;
+    border-top: 2px solid rgb(34, 34, 34);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    & img{
+        border-radius: 15px 50px 15px 70px;
+    }
+    
+}
+
+.card h3 {
+    
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.card p {
+    
+    margin: 5px 0;
+    color: gray;
+}
+
+.order-button {
+
+    height: 40px; 
+    font-family: "club";
+    background-color: #317E68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.order-button:hover {
+    
+    background-color: #317E68;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer{
+    font-family: "Oswald";
+    background: linear-gradient(140deg, gray 0,5%, #126354);
+    color: black;
+    padding: 20px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+ul, li{
+    list-style-type: none;
+    font-size: 24px;
+
+}
+
+.footer-info{
+    display: flex;
+    gap: 30px;
+    font-family: "Oswald";
+    flex-direction: column;
+    font-size: 14px;
+    align-items: center;
+
+    & input{
+        height: 50px;
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+    }
+}
+
+.footer-pagination{
+    display: flex;
+    font-family: "Oswald";
+    font-size: 14px;
+    flex-direction: column;
+    gap: 5px;
+    
+    & a{
+        color: black;
+    }
+}
+
+.footer-info-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    & img{
+        width: 42px;
+        height: 42px;
+    }
+}
+
+.copyright{
+    display: flex;
+    text-align: center;
+    font-family: Arial;
+    height: 30px;
+    background: black;
+    align-content: center;
+}
+
+@keyframes slideToUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);           
+}
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX( -10px );
+    }
+
+    100%{
+        transform: translateX( 140px );
+    }
+}
+
+@keyframes slideDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    100%{
+        opacity: 1;
+        transform:translateY(0) ;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes scale{
+    0%{ 
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform:  translateY(0px);
+    }
+}
+
+@media screen and (max-width:700px){
+    .main-section{
+        & img{
+            width: 300px;
+        }
+    
+        & h1{
+            font-size: 3rem;
+            left: calc(50% - 200px);
+        }
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        height: 90vh;
+    }
+
+    .footer-info{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:410px){
+    .main-section{
+    
+        & h1{
+            font-size: 2.5rem;
+            left: calc(50% - 150px);
+        }
+    }
+
+    .main-bio{
+        & article{
+            font-size: 1rem;
+            width: 90vw;
+        }
+    }
+
+    header nav{
+        display: none;
+    }
 }
